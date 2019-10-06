@@ -12,7 +12,7 @@ void swap(int *a, int *b) {
     *a -= *b;
 }
 
-long sort::bubble(int *vec, size_t size, function_t cmpFunc) {
+long sort::bubble(int *vec, size_t size, cmpFunction_t cmpFunc) {
     long numIterations = 0;
     for (size_t i = 0; i < size; i++) {
         for (size_t j = i+1; j < size; j++, numIterations++) {

@@ -7,7 +7,7 @@ void showHelp();
 
 int main(int argC, char *argS[]) {
 
-	auto cmpFunc = [] (int a, int b) { return (a > b); };
+	cmpFunction_t cmpFunc = [] (int a, int b) { return (a > b); };
 
 	std::cout << sort::bubble(NULL, 0, cmpFunc) << std::endl;
 	
@@ -18,3 +18,5 @@ int main(int argC, char *argS[]) {
 void showHelp() {
 	std::cout << std::endl;
 }
+
+//mingw compilation command: g++ .\src\*.cpp -Wall -Wextra -std=c++17 -ggdb -Iinclude -Llib -o .\bin\out
