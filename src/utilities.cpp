@@ -6,7 +6,7 @@ void swap(int *a, int *b) {
     *a -= *b;
 }
 
-int *initArray(int size) {
+int *initReverseArray(int size) {
 	int *vec = new int[size];
 	if (!vec) error("ERROR - Bad alloc - unable to alloc enought memory for the array");
 
@@ -25,6 +25,11 @@ void printArray(int *vec, int size) {
 }
 
 void error(const char *message) {
-  std::cerr << message << std::endl;
-  exit(-1);
+    std::cerr << message << std::endl;
+    exit(-1);
+}
+
+void pause() {
+    std::cout << "Press enter to continue..." << std::endl;
+    std::cin.get();
 }

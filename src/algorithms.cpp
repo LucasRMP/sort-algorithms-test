@@ -1,6 +1,6 @@
-#include "algorithms.hpp"
+#include "../include/algorithms.hpp"
 
-result_t sort::bubble(int *vec, int size) {
+Result sort::bubble(int *vec, int size) {
     long numIterations = 0;
     long numComparisons = 0;
     long numSwaps = 0;
@@ -18,11 +18,11 @@ result_t sort::bubble(int *vec, int size) {
     }
     timer.stopRecord();
 
-    const result_t result("bubble", numComparisons, numSwaps, numIterations, float(timer.getElapsedTime()) / 1000);
+    Result result(numComparisons, numSwaps, numIterations, timer.getElapsedTime());
     return result;
 }
 
-result_t sort::insertion(int *vec, int size) {
+Result sort::insertion(int *vec, int size) { //! WRONG ALGORITHM
     long numIterations = 0;
     long numComparisons = 0;
     long numSwaps = 0;
@@ -44,11 +44,11 @@ result_t sort::insertion(int *vec, int size) {
     }
     timer.stopRecord();
 
-    const result_t result("bubble", numComparisons, numSwaps, numIterations, float(timer.getElapsedTime()) / 1000);
+    const Result result(numComparisons, numSwaps, numIterations, timer.getElapsedTime());
     return result;
 }
 
-result_t sort::selection(int *vec, int size) {
+Result sort::selection(int *vec, int size) {
     long numIterations = 0;
     long numComparisons = 0;
     long numSwaps = 0;
@@ -71,6 +71,6 @@ result_t sort::selection(int *vec, int size) {
         }
     timer.stopRecord();
 
-    const result_t result("selection", numComparisons, numSwaps, numIterations, float(timer.getElapsedTime()) / 1000);
+    const Result result(numComparisons, numSwaps, numIterations, timer.getElapsedTime());
     return result;
 }

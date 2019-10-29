@@ -5,4 +5,5 @@
 void error(const char*);
 void printArray(int*, int);
 void swap(int*, int*);
-int *initArray(int);
+int *initReverseArray(int);
+void pause();

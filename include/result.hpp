@@ -2,14 +2,15 @@
 
 #include <string>
 
-typedef struct r {
-  std::string algName;
-	long numComparisons;
-	long numSwaps;
-	long numIterations;
-	float timeElapsed;
+class Result {
+	private:
+		long numComparisons;
+		long numSwaps;
+		long numIterations;
+		long timeElapsed;
 
-	r(const char *n, long c, long s, long i, float t);
+	public: 
+		Result(long c, long s, long i, long t);
 
 	const char *toString();
-} result_t;
+};

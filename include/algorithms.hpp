@@ -3,16 +3,16 @@
 #include <iostream>
 #include <string>
 
-#include "utilities.hpp"
-#include "TimeCounter.hpp"
-#include "result.hpp"
+#include "./utilities.hpp"
+#include "./TimeCounter.hpp"
+#include "./Result.hpp"
 
 namespace sort {
 	
-	result_t bubble(int*, int);
-	result_t insertion(int*, int);
-	result_t merge(int*, int);
-	result_t quick(int*, int);
-	result_t selection(int*, int);
+	Result bubble(int*, int);
+	Result insertion(int*, int);
+	Result merge(int*, int);
+	Result quick(int*, int);
+	Result selection(int*, int);
 
 }

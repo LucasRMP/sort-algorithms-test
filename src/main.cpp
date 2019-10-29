@@ -6,7 +6,6 @@
 #include "utilities.hpp"
 
 void showHelp();
-void pause();
 
 int main(int argC, char *argS[]) {
 	
@@ -16,26 +15,24 @@ int main(int argC, char *argS[]) {
 	int size = atoi(argS[1]);
 	std::cout << "Size: " << size << std::endl;
 
-	int *vec = initArray(size);
+	int *vec = initReverseArray(size);
 
 	char option = argS[2][0];
 
 	switch (option) {
 		case 'b':
-			std::cout << sort::bubble(vec, size).toString() << std::endl;
+			std::cout << "Bubble: " << sort::bubble(vec, size).toString() << std::endl;
 		break;
 
 		case 's':
-			std::cout << sort::selection(vec, size).toString() << std::endl;
+			std::cout << "Selection: " << sort::selection(vec, size).toString() << std::endl;
 		break;
 
 		case 'i':
-			std::cout << sort::insertion(vec, size).toString() << std::endl;
+			std::cout << "Insertion: " << sort::insertion(vec, size).toString() << std::endl;
 		break;
 	
 	}
-
-
 
 	delete vec;
 	pause();
@@ -53,9 +50,6 @@ void showHelp() {
 						<< "-> \'r\' for raddix\n";
 }
 
-void pause() {
-	std::cout << "Press enter to continue..." << std::endl;
-	std::cin.get();
-}
+
 
 //mingw compilation command: g++ .\src\*.cpp -Wall -Wunused-variable -Wextra -std=c++17 -ggdb -Iinclude -Llib -o .\bin\out
