@@ -2,14 +2,10 @@
 
 #include <iostream>
 #include <string>
-#include <chrono>
-#include <functional>
 
 #include "utilities.hpp"
 #include "TimeCounter.hpp"
 #include "result.hpp"
-
-typedef std::function< bool (int, int) > cmpFunction_t;
 
 namespace sort {
 	
