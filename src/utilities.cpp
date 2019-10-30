@@ -12,8 +12,6 @@ int *initReverseArray(int size) {
 
 	for (int i = 0; i < size; i++) vec[i] = i;
 
-	std::cout << "Array initialized" << std::endl;
-
 	return vec;
 }
 

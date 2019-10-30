@@ -9,10 +9,10 @@ Result::Result(long c, long s, long i, long t) {
 
 const char * Result::toString() {
   
-  std::string result =  "{ numComparisons: " + std::to_string(this->numComparisons) + 
-                        ", numSwaps: " + std::to_string(this->numSwaps) +
-                        ", numIterations: " + std::to_string(this->numIterations) +
-                        ", timeElapsed: " + std::to_string(this->timeElapsed) + "ms };";
+  std::string result =  "{\n  numComparisons: " + std::to_string(this->numComparisons) + 
+                        ",\n  numSwaps: " + std::to_string(this->numSwaps) +
+                        ",\n  numIterations: " + std::to_string(this->numIterations) +
+                        ",\n  timeElapsed: " + std::to_string(this->timeElapsed) + "ms\n};";
 
   return result.c_str();
 }
